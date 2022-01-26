@@ -1,0 +1,103 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+$primary: #00bfa6;
+$primary-light: findLightColor($primary);
+$primary-dark: findDarkColor($primary);
+$primary-invert: findColorInvert($primary);
+
+$secondary: #222222;
+$secondary-light: findLightColor($secondary);
+$secondary-dark: findDarkColor($secondary);
+$secondary-invert: findColorInvert($secondary);
+
+// Lists and maps
+$custom-colors: null !default;
+$custom-shades: null !default;
+
+$colors: mergeColorMaps(
+  (
+    "white": (
+      $white,
+      $black
+    ),
+    "black": (
+      $black,
+      $white
+    ),
+    "light": (
+      $light,
+      $light-invert
+    ),
+    "dark": (
+      $dark,
+      $dark-invert
+    ),
+    "primary": (
+      $primary,
+      $primary-invert,
+      $primary-light,
+      $primary-dark
+    ),
+    "secondary": (
+      $secondary,
+      $secondary-invert,
+      $secondary-light,
+      $secondary-dark
+    ),
+    "link": (
+      $link,
+      $link-invert,
+      $link-light,
+      $link-dark
+    ),
+    "info": (
+      $info,
+      $info-invert,
+      $info-light,
+      $info-dark
+    ),
+    "success": (
+      $success,
+      $success-invert,
+      $success-light,
+      $success-dark
+    ),
+    "warning": (
+      $warning,
+      $warning-invert,
+      $warning-light,
+      $warning-dark
+    ),
+    "danger": (
+      $danger,
+      $danger-invert,
+      $danger-light,
+      $danger-dark
+    )
+  ),
+  $custom-colors
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Text selection
+::selection {
+  background: $primary;
+  color: #ffffff;
+}
+
+// Card box shadow
+.box {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+// Import Prism styles
+@import "./prism.scss";

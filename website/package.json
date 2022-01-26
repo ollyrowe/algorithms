@@ -1,0 +1,61 @@
+{
+  "name": "algorithms-website",
+  "description": "A collection of computing algorithms",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "prebuild": "npm run compile-content",
+    "build": "vue-cli-service build",
+    "compile-content": "node ./scripts/compileContent.js --output-file ../src/assets/content.json",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "buefy": "^0.9.7",
+    "core-js": "^3.6.5",
+    "lodash": "^4.17.21",
+    "prismjs": "^1.26.0",
+    "vue": "^2.6.14",
+    "vue-prism-component": "^1.2.0",
+    "vue-router": "^3.5.1",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "^4.5.13",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "sass": "^1.35.1",
+    "sass-loader": "^10.1.1",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "plugin:prettier/recommended",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "prettier": {
+    "prettier.trailingComma": "none",
+    "prettier.tabWidth": 2,
+    "prettier.endOfLine": "auto"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
