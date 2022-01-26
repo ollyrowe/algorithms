@@ -1,0 +1,37 @@
+{
+  "name": "algorithms",
+  "version": "0.1.0",
+  "description": "A collection of computing algorithms",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ollyrowe/algorithms.git"
+  },
+  "author": "Olly Rowe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ollyrowe/algorithms/issues"
+  },
+  "homepage": "https://github.com/ollyrowe/algorithms#readme",
+  "release": {
+    "branches": [
+      "master"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md"
+        }
+      ],
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "message": "chore(release): bump version to v${nextRelease.version}"
+        }
+      ]
+    ]
+  }
+}
