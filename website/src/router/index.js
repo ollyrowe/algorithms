@@ -1,5 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+// Import config
+import config from "../../vue.config";
 // Import store
 import store from "../store";
 // Import views
@@ -36,6 +38,7 @@ export const routes = [
 const router = new VueRouter({
   mode: "history",
   routes,
+  base: config.publicPath,
   scrollBehavior: (to, _from, savedPosition) => {
     if (savedPosition) {
       return savedPosition;
