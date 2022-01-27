@@ -20,12 +20,11 @@ jobs:
 
       - name: Configure 404 Fallback File
         run: |
-          cd dist
+          cd website/dist
           cp index.html 404.html
-          cd ../
 
       - name: "Deploy to GitHub Pages"
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
-          folder: dist
+          folder: website/dist
