@@ -1,0 +1,1 @@
+A linear search is implemented by starting at the beginning of an array and visiting each value until the searched value is found. In the examples below this is seen with the array and value parameters and the return of the index in which the value in the array was found (returning -1 if nothing is found).
