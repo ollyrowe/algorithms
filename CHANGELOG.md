@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/ollyrowe/algorithms/compare/v1.2.0...v1.3.0) (2022-02-01)
+
+
+### Features
+
+* **ds:** add example data structures ([210fa1a](https://github.com/ollyrowe/algorithms/commit/210fa1ae80c6c2bd82ceaa0423cadd6f21f8831b))
+
 # [1.2.0](https://github.com/ollyrowe/algorithms/compare/v1.1.0...v1.2.0) (2022-02-01)
 
 
