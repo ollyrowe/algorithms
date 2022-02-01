@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/ollyrowe/algorithms/compare/v1.1.0...v1.2.0) (2022-02-01)
+
+
+### Features
+
+* **algorithms:** add example algorithms ([0b191f2](https://github.com/ollyrowe/algorithms/commit/0b191f2027dc9697bf96ff1545be88fa7e31da86))
+
 # [1.1.0](https://github.com/ollyrowe/algorithms/compare/v1.0.0...v1.1.0) (2022-02-01)
 
 
