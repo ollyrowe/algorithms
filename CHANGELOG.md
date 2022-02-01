@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/ollyrowe/algorithms/compare/v1.3.2...v1.3.3) (2022-02-01)
+
+
+### Bug Fixes
+
+* **website:** correctly configure router base URL ([703a80d](https://github.com/ollyrowe/algorithms/commit/703a80d157f6f349556bf39233672c7842b4e005))
+
 ## [1.3.2](https://github.com/ollyrowe/algorithms/compare/v1.3.1...v1.3.2) (2022-02-01)
 
 
