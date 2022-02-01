@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/ollyrowe/algorithms/compare/v1.3.1...v1.3.2) (2022-02-01)
+
+
+### Bug Fixes
+
+* **website:** amend deployment configs ([30c8bc1](https://github.com/ollyrowe/algorithms/commit/30c8bc117b1b13f2ee8c75c2d842fb7e00758889))
+
 ## [1.3.1](https://github.com/ollyrowe/algorithms/compare/v1.3.0...v1.3.1) (2022-02-01)
 
 
