@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/ollyrowe/algorithms/compare/v1.3.3...v1.4.0) (2022-02-02)
+
+
+### Bug Fixes
+
+* **algorithms:** minor changes to linear searches ([d51c242](https://github.com/ollyrowe/algorithms/commit/d51c24216d95db4e73afea36854a4916717b9b3f))
+* **algorithms:** modified cs and py ([c501041](https://github.com/ollyrowe/algorithms/commit/c501041ec7139a913ac9a27f6a09a2c0b0ced66e))
+
+
+### Features
+
+* **algorithms:** add linear search examples ([c3c3078](https://github.com/ollyrowe/algorithms/commit/c3c3078f4331f818a4611bcd0dd03a0d6b53b9f7))
+
 ## [1.3.3](https://github.com/ollyrowe/algorithms/compare/v1.3.2...v1.3.3) (2022-02-01)
 
 
