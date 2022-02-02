@@ -1,6 +1,6 @@
-function search(array: number[], x: number): number {
+function linearSearch(array: number[], value: number): number {
   for (let i = 0; i < array.length; i++) {
-    if (array[i] == x) {
+    if (array[i] == value) {
       return i;
     }
   }
