@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/ollyrowe/algorithms/compare/v1.4.0...v1.4.1) (2022-02-02)
+
+
+### Bug Fixes
+
+* amend release workflow to update package.json ([048a56b](https://github.com/ollyrowe/algorithms/commit/048a56b5d25ee7829e34eeae39b9bdbd57827fd1)), closes [#11](https://github.com/ollyrowe/algorithms/issues/11)
+
 # [1.4.0](https://github.com/ollyrowe/algorithms/compare/v1.3.3...v1.4.0) (2022-02-02)
 
 
