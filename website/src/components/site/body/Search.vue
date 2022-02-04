@@ -2,20 +2,34 @@
   <section>
     <b-field>
       <b-autocomplete
-        v-model="searchText"
+        v-if="hasDropdown"
+        :value="localText"
         :data="searchResults"
         group-field="type"
         group-options="items"
         placeholder="Search..."
         icon="search"
         class="search-input"
-        @select="onSelect"
         clear-on-select
         clearable
         rounded
+        @input="onInput"
+        @select="onSelect"
       >
         <template #empty>No results found</template>
       </b-autocomplete>
+      <b-input
+        v-else
+        :value="localText"
+        placeholder="Search..."
+        icon="search"
+        icon-right="close-circle"
+        icon-right-clickable
+        clearable
+        rounded
+        @input="onInput"
+        @icon-right-click="onClear"
+      />
     </b-field>
   </section>
 </template>
@@ -25,8 +39,20 @@ import toTitleCase from "@/utils/toTitleCase";
 
 export default {
   name: "Search",
+  props: {
+    text: {
+      type: String,
+      default: ""
+    },
+    hasDropdown: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
-    return { searchText: "" };
+    return {
+      localText: this.text
+    };
   },
   computed: {
     content() {
@@ -58,7 +84,7 @@ export default {
       const searchResults = this.searchItems.map(({ type, items }) => ({
         type,
         items: items.filter(item =>
-          item.toLowerCase().includes(this.searchText.toLowerCase())
+          item.toLowerCase().includes(this.localText.toLowerCase())
         )
       }));
 
@@ -66,7 +92,16 @@ export default {
       return searchResults.filter(result => result.items.length);
     }
   },
+  watch: {
+    text(text) {
+      this.localText = text;
+    }
+  },
   methods: {
+    onInput(text) {
+      this.localText = text;
+      this.$emit("update:text", text);
+    },
     onSelect(option) {
       if (option) {
         const { type, resource } = this.content.find(
@@ -79,6 +114,9 @@ export default {
           this.$router.push(newPath);
         }
       }
+    },
+    onClear() {
+      this.onInput("");
     }
   }
 };

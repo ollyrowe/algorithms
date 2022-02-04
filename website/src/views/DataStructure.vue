@@ -35,7 +35,7 @@ export default {
 .coming-soon-message {
   display: flex;
   justify-content: center;
-  padding: 4em;
-  max-height: 400px;
+  padding: 2em;
+  max-height: 450px;
 }
 </style>

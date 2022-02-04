@@ -16,6 +16,6 @@ export default {
 .message-content {
   display: flex;
   align-items: center;
-  height: 48px;
+  min-height: 48px;
 }
 </style>
