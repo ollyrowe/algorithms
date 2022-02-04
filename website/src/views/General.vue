@@ -7,7 +7,7 @@
       :name="language.name"
       :image="language.image"
       :anchor="language.anchor"
-      :languageClass="language.languageClass"
+      :language-class="language.languageClass"
       :code="resource[language.extension]"
     />
   </div>

@@ -20,8 +20,8 @@ import AnchorLink from "../misc/AnchorLink.vue";
 import WarningMessage from "../misc/WarningMessage.vue";
 
 export default {
-  components: { AnchorLink, WarningMessage },
   name: "InfoCard",
+  components: { AnchorLink, WarningMessage },
   props: {
     content: String
   }
