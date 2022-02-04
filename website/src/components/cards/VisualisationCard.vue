@@ -25,6 +25,6 @@ export default {
 
 <style scoped>
 .upcoming-message {
-  padding: 4em;
+  padding: 4em 2em;
 }
 </style>
