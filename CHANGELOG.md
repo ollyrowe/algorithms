@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/ollyrowe/algorithms/compare/v1.4.1...v1.5.0) (2022-02-04)
+
+
+### Bug Fixes
+
+* **website:** update footer text ([525a395](https://github.com/ollyrowe/algorithms/commit/525a3953419f0cec753c740aeab966d50c20d3f5))
+
+
+### Features
+
+* **website:** add custom desktop scrollbar ([1bb3e17](https://github.com/ollyrowe/algorithms/commit/1bb3e1770c0147f43d732986c453069d3257915f)), closes [#16](https://github.com/ollyrowe/algorithms/issues/16)
+* **website:** add mobile compatibility ([cc5d827](https://github.com/ollyrowe/algorithms/commit/cc5d827d6f3405b3bfa989641cd9e9c2eac81c51)), closes [#13](https://github.com/ollyrowe/algorithms/issues/13)
+
 ## [1.4.1](https://github.com/ollyrowe/algorithms/compare/v1.4.0...v1.4.1) (2022-02-02)
 
 
