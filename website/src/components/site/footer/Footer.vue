@@ -8,7 +8,7 @@
               title="Framework"
               iconClass="has-text-primary fab fa-vuejs fa-2x"
             >
-              This site was built with <strong>Vue.js</strong>
+              This site is built with <strong>Vue.js</strong>
             </FooterCard>
           </div>
           <div class="column is-one-third">
@@ -16,7 +16,7 @@
               title="Language"
               iconClass="has-text-warning fab fa-js-square fa-2x"
             >
-              This site was built with <strong>JavaScript</strong>
+              This site is built with <strong>JavaScript</strong>
             </FooterCard>
           </div>
           <div class="column is-one-third">
