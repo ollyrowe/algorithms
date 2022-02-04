@@ -2,6 +2,7 @@
   "name": "algorithms-website",
   "description": "A collection of computing algorithms",
   "scripts": {
+    "preserve": "npm run compile-content",
     "serve": "vue-cli-service serve",
     "prebuild": "npm run compile-content",
     "build": "vue-cli-service build",
