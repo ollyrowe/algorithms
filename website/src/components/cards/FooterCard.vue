@@ -26,8 +26,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .media-content {
   overflow: hidden;
+}
+
+/* Fixes text clipping issue */
+.subtitle {
+  line-height: inherit;
 }
 </style>
