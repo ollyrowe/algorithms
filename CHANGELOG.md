@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/ollyrowe/algorithms/compare/v1.5.0...v1.5.1) (2022-02-05)
+
+
+### Bug Fixes
+
+* **website:** fix footer text clipping issue ([855cdb3](https://github.com/ollyrowe/algorithms/commit/855cdb352949ae7ba840266b1cf149d3778db8e6)), closes [#34](https://github.com/ollyrowe/algorithms/issues/34)
+
 # [1.5.0](https://github.com/ollyrowe/algorithms/compare/v1.4.1...v1.5.0) (2022-02-04)
 
 
