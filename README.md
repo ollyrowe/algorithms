@@ -159,7 +159,7 @@ Quick links:
 
 ## 📈 Changelog
 
-The project changelog can be found [here](https://github.com/ollyrowe/algorithms/blob/readme/CHANGELOG.md).
+The project changelog can be found [here](https://github.com/ollyrowe/algorithms/blob/master/CHANGELOG.md).
 
 ## 💬 Contribute
 
