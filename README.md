@@ -173,7 +173,7 @@ The project changelog can be found [here](https://github.com/ollyrowe/algorithms
 
 ### Getting Started
 
-To contribute to the project, feel free to make a fork and submit a pull request. This project makes use of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to enable automated semantic releases. For further information on semantic versioning, see https://semver.org/.
+To contribute to the project, feel free to make a fork and submit a pull request. This project makes use of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) to enable automated [Semantic Versioning](https://semver.org/).
 
 ### Contributors
 
