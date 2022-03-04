@@ -1,0 +1,4 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx --no -- commitlint --quiet --edit $1 || (echo "Commit message does not adhere to the convensional commit standard"; false)
