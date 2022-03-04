@@ -13,6 +13,18 @@
     "url": "https://github.com/ollyrowe/algorithms/issues"
   },
   "homepage": "https://github.com/ollyrowe/algorithms#readme",
+  "scripts": {
+    "prepare": "husky install",
+    "website:lint": "cd website && npm run lint --fix"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "website/**/*.{ts,js,vue}": "npm run website:lint"
+  },
   "release": {
     "branches": [
       "master"
@@ -37,7 +49,11 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
     "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/git": "^10.0.1"
+    "@semantic-release/git": "^10.0.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4"
   }
 }
