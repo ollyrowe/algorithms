@@ -74,6 +74,14 @@ To contribute to this project, you must first make a fork of the repository and 
 git clone https://github.com/<your_username>/algorithms.git
 ```
 
+### Installation
+
+After cloning the repository, run the following command to install the required dependencies.
+
+```bash
+npm install
+```
+
 ### Algorithms
 
 All resources held within this project can be seen from the [website](https://ollyrowe.github.io/algorithms/). This site hosts an up-to-date view of all algorithms, data structures and additional general resources held within this repository.
@@ -92,7 +100,7 @@ After cloning the repository, step into the website directory and install the de
 
 ```bash
 cd website
-npm run install
+npm install
 ```
 
 To run the local development environment, the following command can be used.
