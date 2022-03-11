@@ -1,6 +1,6 @@
 import _ from "lodash";
 
-const toKebabCase = text => {
+const toKebabCase = (text: string) => {
   return _.kebabCase(text);
 };
 
