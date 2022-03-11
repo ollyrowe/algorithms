@@ -42,7 +42,7 @@ export default {
       }
 
       return route.name;
-    }
-  }
+    },
+  },
 };
 </script>

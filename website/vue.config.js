@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/algorithms/" : "/"
+  publicPath: process.env.NODE_ENV === "production" ? "/algorithms/" : "/",
 };

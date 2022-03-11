@@ -78,16 +78,13 @@ export default {
     },
     dataStructures() {
       return this.$store.getters.dataStructures;
-    }
+    },
   },
   methods: {
     getLink(algorithm) {
-      return algorithm
-        .split(" ")
-        .join("-")
-        .toLowerCase();
-    }
-  }
+      return algorithm.split(" ").join("-").toLowerCase();
+    },
+  },
 };
 </script>
 

@@ -42,16 +42,16 @@ export default {
   props: {
     text: {
       type: String,
-      default: ""
+      default: "",
     },
     hasDropdown: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   data() {
     return {
-      localText: this.text
+      localText: this.text,
     };
   },
   computed: {
@@ -61,17 +61,17 @@ export default {
     searchItems() {
       let searchItems = [];
 
-      this.content.forEach(resource => {
+      this.content.forEach((resource) => {
         const resourceType = toTitleCase(resource.type);
 
         const resourceTypeItems = searchItems.find(
-          searchItem => searchItem.name == resourceType
+          (searchItem) => searchItem.name == resourceType
         );
 
         if (resourceTypeItems) {
           searchItems = searchItems.map(({ type, items }) => ({
             type,
-            items: [...items, resource.name]
+            items: [...items, resource.name],
           }));
         } else {
           searchItems.push({ type: resourceType, items: [resource.name] });
@@ -83,19 +83,19 @@ export default {
     searchResults() {
       const searchResults = this.searchItems.map(({ type, items }) => ({
         type,
-        items: items.filter(item =>
+        items: items.filter((item) =>
           item.toLowerCase().includes(this.localText.toLowerCase())
-        )
+        ),
       }));
 
       // Remove any search result groups that have no items
-      return searchResults.filter(result => result.items.length);
-    }
+      return searchResults.filter((result) => result.items.length);
+    },
   },
   watch: {
     text(text) {
       this.localText = text;
-    }
+    },
   },
   methods: {
     onInput(text) {
@@ -105,7 +105,7 @@ export default {
     onSelect(option) {
       if (option) {
         const { type, resource } = this.content.find(
-          resource => resource.name === option
+          (resource) => resource.name === option
         );
 
         const newPath = `/${type}/${resource}`;
@@ -117,8 +117,8 @@ export default {
     },
     onClear() {
       this.onInput("");
-    }
-  }
+    },
+  },
 };
 </script>
 

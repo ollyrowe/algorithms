@@ -29,8 +29,8 @@ export default {
 
       const resources = this.$store.getters.general;
 
-      return resources.find(resource => resource.resource === resourceName);
-    }
-  }
+      return resources.find((resource) => resource.resource === resourceName);
+    },
+  },
 };
 </script>
