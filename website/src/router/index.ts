@@ -1,5 +1,5 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
+import VueRouter, { NavigationGuard, RouteConfig } from "vue-router";
 // Import config
 import config from "../../vue.config";
 // Import store
@@ -13,26 +13,26 @@ Vue.use(VueRouter);
 
 const defaultPath = "/general/hello-world";
 
-export const routes = [
+export const routes: RouteConfig[] = [
   {
     path: "/general/:name",
     name: "General",
-    component: General
+    component: General,
   },
   {
     path: "/algorithms/:name",
     name: "Algorithms",
-    component: Algorithm
+    component: Algorithm,
   },
   {
     path: "/data-structures/:name",
     name: "Data Structures",
-    component: DataStructure
+    component: DataStructure,
   },
   {
     path: "/:catchAll(.*)",
-    redirect: defaultPath
-  }
+    redirect: defaultPath,
+  },
 ];
 
 const router = new VueRouter({
@@ -47,14 +47,14 @@ const router = new VueRouter({
     } else {
       return { x: 0, y: 0, behavior: "smooth" };
     }
-  }
+  },
 });
 
 /**
  * Before enter route hook which verifies that the specified resource
  * exists, otherwise will redirect the user back to the default path.
  */
-function beforeEnter(to, _from, next) {
+const beforeEnter: NavigationGuard<Vue> = (to, _from, next) => {
   const splitPath = to.path.split("/");
 
   const resourceType = splitPath[splitPath.length - 2];
@@ -70,7 +70,7 @@ function beforeEnter(to, _from, next) {
   } else {
     next(defaultPath);
   }
-}
+};
 
 router.beforeEach(beforeEnter);
 

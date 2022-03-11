@@ -1,3 +1,5 @@
+import Vue from "vue";
+
 /**
  * Vue Window Mixin.
  *
@@ -5,13 +7,13 @@
  *  - Window width and height data values
  *  - Utility methods to assist common breakpoints
  */
-export default {
+export default Vue.extend({
   data() {
     return {
       window: {
         width: window.innerWidth,
-        height: window.innerHeight
-      }
+        height: window.innerHeight,
+      },
     };
   },
   methods: {
@@ -30,7 +32,7 @@ export default {
     onResize() {
       this.window.width = window.innerWidth;
       this.window.height = window.innerHeight;
-    }
+    },
   },
   mounted() {
     this.$nextTick(() => {
@@ -39,8 +41,8 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener("resize", this.onResize);
-  }
-};
+  },
+});
 
 /**
  * Bulma breakpoint values in px
@@ -48,5 +50,5 @@ export default {
 const BULMA_BREAKPOINTS = {
   mobile: 768, // Up to 768px
   tablet: 1023, // Between 769px and 1023px
-  desktop: 1215 // Between 1024px and 1215px
+  desktop: 1215, // Between 1024px and 1215px
 };
