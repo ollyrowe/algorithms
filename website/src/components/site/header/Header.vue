@@ -34,9 +34,9 @@ import NavBar from "./NavBar.vue";
 export default {
   name: "Header",
   components: {
-    NavBar
+    NavBar,
   },
-  mixins: [windowMixin]
+  mixins: [windowMixin],
 };
 </script>
 

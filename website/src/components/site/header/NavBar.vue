@@ -56,7 +56,7 @@ export default {
   data() {
     return {
       open: false,
-      searchText: ""
+      searchText: "",
     };
   },
   computed: {
@@ -77,42 +77,42 @@ export default {
         {
           name: "General",
           path: "general",
-          items: this.getItemsModal(this.general)
+          items: this.getItemsModal(this.general),
         },
         {
           name: "Sort Algorithms",
           path: "algorithms",
-          items: this.getItemsModal(this.sortAlgorithms)
+          items: this.getItemsModal(this.sortAlgorithms),
         },
         {
           name: "Search Algorithms",
           path: "algorithms",
-          items: this.getItemsModal(this.searchAlgorithms)
+          items: this.getItemsModal(this.searchAlgorithms),
         },
         {
           name: "Data Structures",
           path: "data-structures",
-          items: this.getItemsModal(this.dataStructures)
-        }
+          items: this.getItemsModal(this.dataStructures),
+        },
       ];
       // Appended expanded prop and filter out any menu items that have no nested items
       return menuItems
-        .map(menuItem => ({
+        .map((menuItem) => ({
           ...menuItem,
           expanded: Boolean(
-            this.searchText || menuItem.items.find(item => item.active)
-          )
+            this.searchText || menuItem.items.find((item) => item.active)
+          ),
         }))
-        .filter(menuItem => menuItem.items.length > 0);
-    }
+        .filter((menuItem) => menuItem.items.length > 0);
+    },
   },
   methods: {
     getItemsModal(items) {
       return items
-        .filter(item =>
+        .filter((item) =>
           item.name.toLowerCase().includes(this.searchText.toLowerCase())
         )
-        .map(item => {
+        .map((item) => {
           const currentResource = this.$route.params.name;
 
           const active = item.resource === currentResource;
@@ -123,8 +123,8 @@ export default {
     onClose() {
       this.open = false;
       this.searchText = "";
-    }
-  }
+    },
+  },
 };
 </script>
 

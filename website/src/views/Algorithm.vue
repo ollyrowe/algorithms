@@ -29,8 +29,10 @@ export default {
 
       const algorithms = this.$store.getters.algorithms;
 
-      return algorithms.find(algorithm => algorithm.resource === algorithmName);
-    }
-  }
+      return algorithms.find(
+        (algorithm) => algorithm.resource === algorithmName
+      );
+    },
+  },
 };
 </script>

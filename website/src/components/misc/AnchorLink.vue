@@ -6,8 +6,8 @@
 export default {
   name: "AnchorLink",
   props: {
-    to: String
-  }
+    to: String,
+  },
 };
 </script>
 

@@ -77,8 +77,8 @@ export default {
     },
     numberOfLinesOfCode() {
       return "WIP";
-    }
-  }
+    },
+  },
 };
 </script>
 

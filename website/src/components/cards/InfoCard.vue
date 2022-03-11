@@ -23,7 +23,7 @@ export default {
   name: "InfoCard",
   components: { AnchorLink, WarningMessage },
   props: {
-    content: String
-  }
+    content: String,
+  },
 };
 </script>

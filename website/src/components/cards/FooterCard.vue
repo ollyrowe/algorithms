@@ -21,8 +21,8 @@ export default {
   name: "FooterCard",
   props: {
     title: String,
-    iconClass: String
-  }
+    iconClass: String,
+  },
 };
 </script>
 

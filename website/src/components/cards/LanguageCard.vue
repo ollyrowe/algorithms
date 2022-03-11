@@ -27,8 +27,8 @@ export default {
     image: String,
     anchor: String,
     languageClass: String,
-    code: String
-  }
+    code: String,
+  },
 };
 </script>
 
