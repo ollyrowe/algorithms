@@ -1,7 +1,7 @@
-const toTitleCase = (string: string) => {
+const toTitleCase = (string: string): string => {
   return string
     .split(" ")
-    .map((str) => str.charAt(0).toUpperCase() + str.substr(1).toLowerCase())
+    .map((str) => str.charAt(0).toUpperCase() + str.substring(1).toLowerCase())
     .join(" ");
 };
 
