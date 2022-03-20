@@ -2,13 +2,15 @@
   <router-link :to="to" class="link">#</router-link>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from "vue";
+
+export default Vue.extend({
   name: "AnchorLink",
   props: {
     to: String,
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>

@@ -19,7 +19,7 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import windowMixin from "@/utils/windowMixin";
 
 import Menu from "./Menu.vue";
@@ -27,10 +27,9 @@ import Search from "./Search.vue";
 
 import toTitleCase from "@/utils/toTitleCase";
 
-export default {
+export default windowMixin.extend({
   name: "Body",
   components: { Menu, Search },
-  mixins: [windowMixin],
   computed: {
     currentRoute() {
       const route = this.$route;
@@ -44,5 +43,5 @@ export default {
       return route.name;
     },
   },
-};
+});
 </script>

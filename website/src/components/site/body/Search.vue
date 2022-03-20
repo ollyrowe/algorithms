@@ -34,10 +34,19 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
+
+import store from "@/store";
+
 import toTitleCase from "@/utils/toTitleCase";
 
-export default {
+interface SearchItem {
+  type: string;
+  items: string[];
+}
+
+export default Vue.extend({
   name: "Search",
   props: {
     text: {
@@ -56,16 +65,16 @@ export default {
   },
   computed: {
     content() {
-      return this.$store.state.content;
+      return store.state.content;
     },
     searchItems() {
-      let searchItems = [];
+      let searchItems: SearchItem[] = [];
 
       this.content.forEach((resource) => {
         const resourceType = toTitleCase(resource.type);
 
         const resourceTypeItems = searchItems.find(
-          (searchItem) => searchItem.name == resourceType
+          (searchItem) => searchItem.type == resourceType
         );
 
         if (resourceTypeItems) {
@@ -80,7 +89,7 @@ export default {
 
       return searchItems;
     },
-    searchResults() {
+    searchResults(): SearchItem[] {
       const searchResults = this.searchItems.map(({ type, items }) => ({
         type,
         items: items.filter((item) =>
@@ -98,20 +107,22 @@ export default {
     },
   },
   methods: {
-    onInput(text) {
+    onInput(text: string) {
       this.localText = text;
       this.$emit("update:text", text);
     },
-    onSelect(option) {
+    onSelect(option: string) {
       if (option) {
-        const { type, resource } = this.content.find(
+        const resource = this.content.find(
           (resource) => resource.name === option
         );
 
-        const newPath = `/${type}/${resource}`;
+        if (resource) {
+          const newPath = `/${resource.type}/${resource.resource}`;
 
-        if (this.$route.path !== newPath) {
-          this.$router.push(newPath);
+          if (this.$route.path !== newPath) {
+            this.$router.push(newPath);
+          }
         }
       }
     },
@@ -119,7 +130,7 @@ export default {
       this.onInput("");
     },
   },
-};
+});
 </script>
 
 <style scoped>

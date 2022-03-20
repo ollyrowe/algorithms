@@ -12,27 +12,31 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
+
+import store from "@/store";
+
 import LanguageCard from "@/components/cards/LanguageCard.vue";
 import VisualisationCard from "@/components/cards/VisualisationCard.vue";
 import InfoCard from "@/components/cards/InfoCard.vue";
 
-export default {
+export default Vue.extend({
   name: "Algorithm",
   components: { LanguageCard, VisualisationCard, InfoCard },
   computed: {
     languages() {
-      return this.$store.state.languages;
+      return store.state.languages;
     },
     algorithm() {
       const algorithmName = this.$route.params.name;
 
-      const algorithms = this.$store.getters.algorithms;
+      const algorithms = store.getters.algorithms;
 
       return algorithms.find(
         (algorithm) => algorithm.resource === algorithmName
       );
     },
   },
-};
+});
 </script>

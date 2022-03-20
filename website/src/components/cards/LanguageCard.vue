@@ -14,12 +14,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
+
 import Prism from "vue-prism-component";
 import AnchorLink from "../misc/AnchorLink.vue";
 import WarningMessage from "../misc/WarningMessage.vue";
 
-export default {
+export default Vue.extend({
   name: "LanguageCard",
   components: { Prism, AnchorLink, WarningMessage },
   props: {
@@ -29,7 +31,7 @@ export default {
     languageClass: String,
     code: String,
   },
-};
+});
 </script>
 
 <style scoped>

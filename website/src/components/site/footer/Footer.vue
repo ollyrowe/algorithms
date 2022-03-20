@@ -63,23 +63,27 @@
   </footer>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
+
+import store from "@/store";
+
 import FooterCard from "../../cards/FooterCard.vue";
-export default {
+export default Vue.extend({
   name: "Footer",
   components: { FooterCard },
   computed: {
     numberOfAlgorithms() {
-      return this.$store.getters.algorithms.length;
+      return store.getters.algorithms.length;
     },
     numberOfLanguages() {
-      return this.$store.state.languages.length;
+      return store.state.languages.length;
     },
     numberOfLinesOfCode() {
       return "WIP";
     },
   },
-};
+});
 </script>
 
 <style scoped>

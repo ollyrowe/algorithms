@@ -12,21 +12,25 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from "vue";
+
+import store from "@/store";
+
+export default Vue.extend({
   name: "DataStructure",
   computed: {
     dataStructure() {
       const dataStructureName = this.$route.params.name;
 
-      const dataStructures = this.$store.getters.dataStructures;
+      const dataStructures = store.getters.dataStructures;
 
       return dataStructures.find(
         (dataStructure) => dataStructure.resource === dataStructureName
       );
     },
   },
-};
+});
 </script>
 
 <style scoped>
