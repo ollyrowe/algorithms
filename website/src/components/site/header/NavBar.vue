@@ -47,10 +47,28 @@
   </b-navbar>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
+
+import store from "@/store";
+import { Resource } from "@/store/types";
+
 import Search from "../body/Search.vue";
 
-export default {
+interface Item {
+  name: string;
+  link: string;
+  active: boolean;
+}
+
+interface MenuItem {
+  name: string;
+  path: string;
+  items: Item[];
+  expanded: boolean;
+}
+
+export default Vue.extend({
   name: "NavBar",
   components: { Search },
   data() {
@@ -61,18 +79,18 @@ export default {
   },
   computed: {
     general() {
-      return this.$store.getters.general;
+      return store.getters.general;
     },
     sortAlgorithms() {
-      return this.$store.getters.sortAlgorithms;
+      return store.getters.sortAlgorithms;
     },
     searchAlgorithms() {
-      return this.$store.getters.searchAlgorithms;
+      return store.getters.searchAlgorithms;
     },
     dataStructures() {
-      return this.$store.getters.dataStructures;
+      return store.getters.dataStructures;
     },
-    menuItems() {
+    menuItems(): MenuItem[] {
       const menuItems = [
         {
           name: "General",
@@ -107,7 +125,7 @@ export default {
     },
   },
   methods: {
-    getItemsModal(items) {
+    getItemsModal(items: Resource[]): Item[] {
       return items
         .filter((item) =>
           item.name.toLowerCase().includes(this.searchText.toLowerCase())
@@ -125,7 +143,7 @@ export default {
       this.searchText = "";
     },
   },
-};
+});
 </script>
 
 <style lang="scss" scoped>

@@ -15,15 +15,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
+
 import AnchorLink from "../misc/AnchorLink.vue";
 import WarningMessage from "../misc/WarningMessage.vue";
 
-export default {
+export default Vue.extend({
   name: "InfoCard",
   components: { AnchorLink, WarningMessage },
   props: {
     content: String,
   },
-};
+});
 </script>

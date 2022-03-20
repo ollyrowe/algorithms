@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Vuex from "vuex";
+import Vuex, { Store } from "vuex";
 
 import content from "@/assets/content.json";
 
@@ -31,7 +31,15 @@ const getters: Getters<State> = {
   },
 };
 
-const store = new Vuex.Store<State>({
+/**
+ * Add getters property typings
+ */
+interface CustomStore<S> extends Store<S> {
+  /* Map of the return types of the getter methods */
+  getters: { [Key in keyof Getters<S>]: ReturnType<Getters<S>[Key]> };
+}
+
+const store: CustomStore<State> = new Store<State>({
   state: {
     content,
     languages: [

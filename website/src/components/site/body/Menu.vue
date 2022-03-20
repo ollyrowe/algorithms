@@ -60,32 +60,36 @@
   </aside>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import Vue from "vue";
+
+import store from "@/store";
+
+export default Vue.extend({
   name: "Menu",
   computed: {
     languages() {
-      return this.$store.state.languages;
+      return store.state.languages;
     },
     general() {
-      return this.$store.getters.general;
+      return store.getters.general;
     },
     sortAlgorithms() {
-      return this.$store.getters.sortAlgorithms;
+      return store.getters.sortAlgorithms;
     },
     searchAlgorithms() {
-      return this.$store.getters.searchAlgorithms;
+      return store.getters.searchAlgorithms;
     },
     dataStructures() {
-      return this.$store.getters.dataStructures;
+      return store.getters.dataStructures;
     },
   },
   methods: {
-    getLink(algorithm) {
+    getLink(algorithm: string) {
       return algorithm.split(" ").join("-").toLowerCase();
     },
   },
-};
+});
 </script>
 
 <style scoped>

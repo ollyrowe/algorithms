@@ -13,24 +13,28 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from "vue";
+
+import store from "@/store";
+
 import InfoCard from "@/components/cards/InfoCard.vue";
 import LanguageCard from "@/components/cards/LanguageCard.vue";
 
-export default {
+export default Vue.extend({
   name: "General",
   components: { InfoCard, LanguageCard },
   computed: {
     languages() {
-      return this.$store.state.languages;
+      return store.state.languages;
     },
     resource() {
       const resourceName = this.$route.params.name;
 
-      const resources = this.$store.getters.general;
+      const resources = store.getters.general;
 
       return resources.find((resource) => resource.resource === resourceName);
     },
   },
-};
+});
 </script>

@@ -14,7 +14,7 @@ export interface Resource {
 
 export interface Language {
   name: string;
-  extension: string;
+  extension: keyof Resource;
   anchor: string;
   languageClass: string;
   image: any;

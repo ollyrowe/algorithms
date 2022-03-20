@@ -26,18 +26,17 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import windowMixin from "@/utils/windowMixin";
 
 import NavBar from "./NavBar.vue";
 
-export default {
+export default windowMixin.extend({
   name: "Header",
   components: {
     NavBar,
   },
-  mixins: [windowMixin],
-};
+});
 </script>
 
 <style scoped>
