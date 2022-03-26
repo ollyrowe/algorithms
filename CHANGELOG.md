@@ -1,3 +1,11 @@
+## [1.5.2](https://github.com/ollyrowe/algorithms/compare/v1.5.1...v1.5.2) (2022-03-26)
+
+
+### Bug Fixes
+
+* **website:** lock node version within deploy script ([645fe40](https://github.com/ollyrowe/algorithms/commit/645fe40866d168999ed0a3e53a99381064c7805f))
+* **website:** run npm audit fix ([d98d737](https://github.com/ollyrowe/algorithms/commit/d98d737663a60c3f42eb3fda7655edc42137d46b))
+
 ## [1.5.1](https://github.com/ollyrowe/algorithms/compare/v1.5.0...v1.5.1) (2022-02-05)
 
 
