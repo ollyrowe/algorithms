@@ -154,7 +154,7 @@ npm run build
 
 #### CI / CD
 
-This project makes use [GitHub Actions](https://github.com/features/actions) to enable continuous integration and deployment of new features into the master branch which is automatically deployed to [GitHub Pages](https://pages.github.com/).
+This project makes use of [GitHub Actions](https://github.com/features/actions) to enable continuous integration and deployment of new features into the master branch which is automatically deployed to [GitHub Pages](https://pages.github.com/).
 
 ## ✨ Request Feature
 
