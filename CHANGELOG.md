@@ -1,3 +1,11 @@
+## [1.6.1](https://github.com/ollyrowe/algorithms/compare/v1.6.0...v1.6.1) (2022-03-30)
+
+
+### Bug Fixes
+
+* **ci:** edit deploy action to trigger on new tag ([e1b0fa6](https://github.com/ollyrowe/algorithms/commit/e1b0fa6de357fa739a4f51b7def7a77d9ed098d2))
+* **ci:** edit release action to cause new workflow ([3274b32](https://github.com/ollyrowe/algorithms/commit/3274b322916c2fae74c0862801c247b88702dd69)), closes [#53](https://github.com/ollyrowe/algorithms/issues/53)
+
 # [1.6.0](https://github.com/ollyrowe/algorithms/compare/v1.5.2...v1.6.0) (2022-03-30)
 
 
