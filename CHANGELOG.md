@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/ollyrowe/algorithms/compare/v1.6.2...v1.6.3) (2022-03-30)
+
+
+### Bug Fixes
+
+* **ci:** edit release action to not persist credentials ([917e65f](https://github.com/ollyrowe/algorithms/commit/917e65fc56aca0059246a16cc47ab7bf66048d05))
+
 ## [1.6.2](https://github.com/ollyrowe/algorithms/compare/v1.6.1...v1.6.2) (2022-03-30)
 
 
