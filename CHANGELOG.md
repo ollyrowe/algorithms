@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/ollyrowe/algorithms/compare/v1.6.1...v1.6.2) (2022-03-30)
+
+
+### Bug Fixes
+
+* **ci:** edit deploy action to run on new release ([dc515ee](https://github.com/ollyrowe/algorithms/commit/dc515ee1449f2007e0f0ab36b89f2896e84172e2))
+
 ## [1.6.1](https://github.com/ollyrowe/algorithms/compare/v1.6.0...v1.6.1) (2022-03-30)
 
 
