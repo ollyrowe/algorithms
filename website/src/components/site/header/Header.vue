@@ -12,6 +12,7 @@
                 <h3 class="subtitle has-text-primary">
                   A collection of computing algorithms
                 </h3>
+                <code class="version-number">v{{ version }}</code>
               </div>
               <img
                 src="@/assets/images/illustrations/programming.svg"
@@ -27,6 +28,8 @@
 </template>
 
 <script lang="ts">
+import { version } from "../../../../../package.json";
+
 import windowMixin from "@/utils/windowMixin";
 
 import NavBar from "./NavBar.vue";
@@ -36,6 +39,9 @@ export default windowMixin.extend({
   components: {
     NavBar,
   },
+  data() {
+    return { version };
+  },
 });
 </script>
 
@@ -43,5 +49,12 @@ export default windowMixin.extend({
 .programming-image {
   max-height: 200px;
   margin-left: auto;
+}
+
+.version-number {
+  color: whitesmoke;
+  background-color: initial;
+  font-size: 1.25em;
+  padding: 0;
 }
 </style>
