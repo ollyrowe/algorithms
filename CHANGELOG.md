@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/ollyrowe/algorithms/compare/v1.5.2...v1.6.0) (2022-03-30)
+
+
+### Features
+
+* **website:** add version number to header ([70d8f1b](https://github.com/ollyrowe/algorithms/commit/70d8f1ba5a354127aa1b26b4cd6d01d42b8e2df8)), closes [#49](https://github.com/ollyrowe/algorithms/issues/49)
+
 ## [1.5.2](https://github.com/ollyrowe/algorithms/compare/v1.5.1...v1.5.2) (2022-03-26)
 
 
