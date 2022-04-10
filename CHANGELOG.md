@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/ollyrowe/algorithms/compare/v1.6.4...v1.7.0) (2022-04-10)
+
+
+### Features
+
+* **website:** add lines of code count to website ([69ab7b6](https://github.com/ollyrowe/algorithms/commit/69ab7b6d4788aefd8a32eed161327d8093362c33)), closes [#22](https://github.com/ollyrowe/algorithms/issues/22)
+
+
+### Reverts
+
+* **ci:** add persist credentials back to release action ([734d6f0](https://github.com/ollyrowe/algorithms/commit/734d6f036a471b313fe779bcb51441bad0911feb))
+
 ## [1.6.4](https://github.com/ollyrowe/algorithms/compare/v1.6.3...v1.6.4) (2022-04-10)
 
 
