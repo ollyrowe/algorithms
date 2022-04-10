@@ -3,12 +3,14 @@
   "description": "A collection of computing algorithms",
   "scripts": {
     "prepare": "cd ../ && npm install",
-    "preserve": "npm run compile-content",
+    "preserve": "npm run compile-assets",
     "serve": "vue-cli-service serve",
-    "prebuild": "npm run compile-content",
+    "prebuild": "npm run compile-assets",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
+    "compile-assets": "npm run compile-content && npm run compile-lines-of-code",
     "compile-content": "node ./scripts/compileContent.js --output-file ../src/assets/content.json",
+    "compile-lines-of-code": "sloc ../ -f json -e node_modules/* > ./src/assets/linesOfCode.json",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -42,6 +44,7 @@
     "node-sass": "^4.12.0",
     "prettier": "^2.2.1",
     "sass-loader": "^8.0.2",
+    "sloc": "^0.2.1",
     "typescript": "~4.1.5",
     "vue-template-compiler": "^2.6.11"
   },
