@@ -12,6 +12,32 @@ export interface Resource {
   py?: string;
 }
 
+interface LinesOfCodeSummary {
+  total: number;
+  source: number;
+  comment: number;
+  single: number;
+  block: number;
+  mixed: number;
+  empty: number;
+  todo: number;
+  blockEmpty: number;
+}
+
+interface FileSummary {
+  path: string;
+  stats: LinesOfCodeSummary;
+  badFile: boolean;
+}
+
+export interface LinesOfCode {
+  files: FileSummary[];
+  summary: LinesOfCodeSummary;
+  byExt: {
+    [extension: string]: { files: FileSummary[]; summary: LinesOfCodeSummary };
+  };
+}
+
 export interface Language {
   name: string;
   extension: keyof Resource;
@@ -35,5 +61,6 @@ export interface Getters<S> extends GetterTree<S, any> {
 
 export interface State {
   content: Resource[];
+  linesOfCode: LinesOfCode;
   languages: Language[];
 }

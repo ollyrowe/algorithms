@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex, { Store } from "vuex";
 
 import content from "@/assets/content.json";
+import linesOfCode from "@/assets/linesOfCode.json";
 
 import { State, Getters } from "./types";
 
@@ -42,6 +43,7 @@ interface CustomStore<S> extends Store<S> {
 const store: CustomStore<State> = new Store<State>({
   state: {
     content,
+    linesOfCode,
     languages: [
       {
         name: "JavaScript",

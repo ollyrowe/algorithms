@@ -80,7 +80,7 @@ export default Vue.extend({
       return store.state.languages.length;
     },
     numberOfLinesOfCode() {
-      return "WIP";
+      return store.state.linesOfCode.summary.total;
     },
   },
 });
