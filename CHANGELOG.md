@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/ollyrowe/algorithms/compare/v1.7.0...v1.7.1) (2022-04-12)
+
+
+### Bug Fixes
+
+* **website:** update sloc script to fix lines of code count ([99963ec](https://github.com/ollyrowe/algorithms/commit/99963ecd0443b406952197c6f2e5edb409c75b96)), closes [#60](https://github.com/ollyrowe/algorithms/issues/60)
+
 # [1.7.0](https://github.com/ollyrowe/algorithms/compare/v1.6.4...v1.7.0) (2022-04-10)
 
 
