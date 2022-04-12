@@ -10,7 +10,7 @@
     "test:unit": "vue-cli-service test:unit",
     "compile-assets": "npm run compile-content && npm run compile-lines-of-code",
     "compile-content": "node ./scripts/compileContent.js --output-file ../src/assets/content.json",
-    "compile-lines-of-code": "sloc ../ -f json -e node_modules/* > ./src/assets/linesOfCode.json",
+    "compile-lines-of-code": "sloc ../ -f json -e node_modules > ./src/assets/linesOfCode.json",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
