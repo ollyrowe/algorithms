@@ -1,11 +1,12 @@
 const fs = require("fs");
 const path = require("path");
+const sucrase = require("sucrase");
 
 const config = {
   outputFileArgName: "--output-file",
   contentDirs: ["../../general", "../../algorithms", "../../data-structures"],
   infoFileSuffix: "-info.txt",
-  languageExtensions: ["js", "ts", "java", "cs", "py"],
+  languageExtensions: ["ts", "java", "cs", "py"],
 };
 
 /**
@@ -71,6 +72,19 @@ function compileContent() {
         const languageFilepath = `${subDirPath}/${subDir}.${languageExtension}`;
 
         const languageFileContent = getFileContent(languageFilepath);
+
+        // If the language is TypeScript (.ts)
+        if (languageExtension === "ts") {
+          // If there is a TypeScript implementation
+          if (languageFileContent) {
+            // Transpile the TypeScript into JavaScript
+            resourceContent.js = sucrase.transform(languageFileContent, {
+              transforms: ["typescript"],
+            }).code;
+          } else {
+            resourceContent.js = undefined;
+          }
+        }
 
         resourceContent[languageExtension] = languageFileContent;
       });
