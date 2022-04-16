@@ -5,7 +5,7 @@ const config = {
   outputFileArgName: "--output-file",
   contentDirs: ["../../general", "../../algorithms", "../../data-structures"],
   infoFileSuffix: "-info.txt",
-  languageExtensions: ["js", "ts", "java", "cs", "py"]
+  languageExtensions: ["js", "ts", "java", "cs", "py"],
 };
 
 /**
@@ -33,11 +33,11 @@ function compileContent() {
   const content = [];
 
   // Loop through the content directories
-  config.contentDirs.forEach(contentDir => {
+  config.contentDirs.forEach((contentDir) => {
     // Get all of the sub-directory names
     const subDirs = getDirectories(contentDir);
 
-    subDirs.forEach(subDir => {
+    subDirs.forEach((subDir) => {
       const resourceContent = {};
 
       // Set the raw resource name
@@ -47,10 +47,7 @@ function compileContent() {
       resourceContent.name = kebabToTitleCase(subDir);
 
       // Set the resource type
-      resourceContent.type = contentDir
-        .split("/")
-        .slice(-1)
-        .pop();
+      resourceContent.type = contentDir.split("/").slice(-1).pop();
 
       resourceContent.resource = subDir;
 
@@ -70,7 +67,7 @@ function compileContent() {
        *
        * <directory-name>.<language-extension>
        */
-      config.languageExtensions.forEach(languageExtension => {
+      config.languageExtensions.forEach((languageExtension) => {
         const languageFilepath = `${subDirPath}/${subDir}.${languageExtension}`;
 
         const languageFileContent = getFileContent(languageFilepath);
@@ -91,8 +88,8 @@ function getDirectories(dirPath) {
 
   return fs
     .readdirSync(resolvedPath, { withFileTypes: true })
-    .filter(dirent => dirent.isDirectory())
-    .map(dirent => dirent.name);
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => dirent.name);
 }
 
 function getFileContent(filepath) {
@@ -115,7 +112,7 @@ function doesFileExist(filepath) {
 function kebabToTitleCase(string) {
   return string
     .split("-")
-    .map(str => str.charAt(0).toUpperCase() + str.substr(1).toLowerCase())
+    .map((str) => str.charAt(0).toUpperCase() + str.substr(1).toLowerCase())
     .join(" ");
 }
 
