@@ -66,6 +66,9 @@
     "rules": {
       "vue/require-default-prop": "off"
     },
+    "ignorePatterns": [
+      "/scripts/*.js"
+    ],
     "overrides": [
       {
         "files": [
