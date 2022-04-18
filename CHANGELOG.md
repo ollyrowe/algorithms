@@ -1,3 +1,16 @@
+# [1.8.0](https://github.com/ollyrowe/algorithms/compare/v1.7.1...v1.8.0) (2022-04-18)
+
+
+### Bug Fixes
+
+* **website:** fix anchor offset issue on mobile ([d8978fb](https://github.com/ollyrowe/algorithms/commit/d8978fbb1651fd7c8b10abbe8629eed5d253a59a))
+
+
+### Features
+
+* **website:** add toggle language card component ([16a49f8](https://github.com/ollyrowe/algorithms/commit/16a49f8f17333202775f7421e1ebb57c07d2c6f0))
+* **website:** infer js from ts code ([642c809](https://github.com/ollyrowe/algorithms/commit/642c80961554516a0811e04f4aed8a71644baca3))
+
 ## [1.7.1](https://github.com/ollyrowe/algorithms/compare/v1.7.0...v1.7.1) (2022-04-12)
 
 
