@@ -1,13 +1,13 @@
 <template>
-  <div :id="anchor" class="box">
+  <div :id="language.anchor" class="box">
     <div class="is-flex">
       <h4 class="is-3 is-flex-grow-1">
-        <AnchorLink :to="`#${anchor}`" />
-        {{ name }}
+        <AnchorLink :to="`#${language.anchor}`" />
+        {{ language.name }}
       </h4>
-      <img :src="image" :alt="`${name} Logo`" class="image" />
+      <LanguageIcon :language="language" />
     </div>
-    <Prism v-if="code" :language="languageClass">{{ code }}</Prism>
+    <Prism v-if="code" :language="language.languageClass">{{ code }}</Prism>
     <WarningMessage v-else>
       The implementation for this resource is yet to be complete
     </WarningMessage>
@@ -15,27 +15,29 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue, { PropType } from "vue";
+
+import { Language } from "@/store/types";
 
 import Prism from "vue-prism-component";
 import AnchorLink from "../misc/AnchorLink.vue";
+import LanguageIcon from "../misc/LanguageIcon.vue";
 import WarningMessage from "../misc/WarningMessage.vue";
 
 export default Vue.extend({
   name: "LanguageCard",
-  components: { Prism, AnchorLink, WarningMessage },
+  components: {
+    Prism,
+    AnchorLink,
+    WarningMessage,
+    LanguageIcon,
+  },
   props: {
-    name: String,
-    image: String,
-    anchor: String,
-    languageClass: String,
-    code: String,
+    language: Object as PropType<Language>,
+    code: {
+      type: String,
+      required: false,
+    },
   },
 });
 </script>
-
-<style scoped>
-.image {
-  height: 30px;
-}
-</style>
