@@ -1,7 +1,7 @@
 <template>
   <div :id="anchor" class="box">
     <div class="is-flex">
-      <h4 id="const" class="is-3 is-flex-grow-1">
+      <h4 class="is-3 is-flex-grow-1">
         <AnchorLink :to="`#${anchor}`" />
         {{ name }}
       </h4>
