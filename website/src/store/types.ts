@@ -42,8 +42,14 @@ export interface Language {
   name: string;
   extension: keyof Resource;
   anchor: string;
+  /* The Prism language class */
   languageClass: string;
   image: any;
+}
+
+export interface LanguageInfo {
+  language: Language;
+  code?: string;
 }
 
 type Getter<S, T> = (
