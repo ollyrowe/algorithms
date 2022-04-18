@@ -8,6 +8,8 @@ import store from "../store";
 import General from "@/views/General.vue";
 import Algorithm from "@/views/Algorithm.vue";
 import DataStructure from "@/views/DataStructure.vue";
+// Import constants
+import { BULMA_BREAKPOINTS } from "@/store/constants";
 
 Vue.use(VueRouter);
 
@@ -43,7 +45,14 @@ const router = new VueRouter({
     if (savedPosition) {
       return savedPosition;
     } else if (to.hash) {
-      return { selector: to.hash };
+      const isMobile = window.innerWidth <= BULMA_BREAKPOINTS.mobile;
+
+      return {
+        selector: to.hash,
+        // Add larger offset for mobile devices to account for app bar
+        offset: { x: 0, y: isMobile ? 75 : 20 },
+        behavior: "smooth",
+      };
     } else {
       return { x: 0, y: 0, behavior: "smooth" };
     }
